@@ -1,1 +1,93 @@
+\documentclass[a4paper]{article}
 
+\usepackage{fullpage} % Package to use full page
+\usepackage{parskip} % Package to tweak paragraph skipping
+\usepackage{tikz} % Package for drawing
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{Assignment01}
+\author{Sunjun Hwang}
+\date{20151766}
+
+\begin{document}
+
+\maketitle
+
+\section{Begin to use the source control website github}
+
+
+I cloned the git hub to my local computer using the $<$git clone url address$>$ command.
+After that, I added the file test.txt on the local computer that was cloned.
+Now I have $<$git add test.txt$>$ command and $<$git commit -m "test add"$>$ to move to the file head from my local machine. Finally, the changes in the head are saved to the remote hub of the hub via the $<$git push origin master$>$ command.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[scale=1.0]{git_clone1.PNG}
+\end{center}
+\caption{git clone to my local}\label{exampleplot}
+\end{figure}
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[scale=0.7]{git_clone.PNG}
+\end{center}
+\caption{git clone to my local result}\label{exampleplot}
+\end{figure}
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[scale=1.0]{add_test.PNG}
+\end{center}
+\caption{push to git hub}\label{exampleplot}
+\end{figure}
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[scale=0.8]{test_add.PNG}
+\end{center}
+\caption{push to git hub result}\label{exampleplot}
+\end{figure}
+
+
+\section{Write a report about the utility git}
+
+I use a lot of shift-delete when deleting a file. But there have been several problems with this. When I tried to find the file, I put the file on the desktop and finished working. After I finished changing the file location, I thought I saved it and completely erased it from my desktop. But there was nothing in the changed location. I tried to find it and even bought a paid program. But it doesn't work well. 
+So I got interest in rewinding the file. As a result, two instructions came out. Reset and Revert.
+
+\begin{enumerate}
+\item Git reset $<$option$>$ $<$commit you want to go back$>$
+
+Reset will reset the repository to commit, and history after that commit will be lost. Git reset also has three options.
+
+\begin{itemize}
+\item git reset --hard
+
+It erases all the contents after the history to return. This is a command such as Shift-delete.
+\end{itemize}
+\begin{itemize}
+\item git reset --soft
+
+Unlike Hard, the content after the history is not erased, and the index of the content remains. It is still available for committing again.
+\end{itemize}
+\begin{itemize}
+\item git reset --mixed
+
+The contents after the history are not erased, but the index of the contents is initialized, so you have to add the changed contents again to commit.
+\end{itemize}
+
+\item Git revert $<$commit you want to go back$>$
+
+Revert is a state in which the commit after the history has not been cleared yet. There is a new history on the history.
+\end{enumerate}
+
+\section{my git}
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[scale=0.4]{git.PNG}
+\end{center}
+\caption{screenshot of my project at github}\label{exampleplot}
+\end{figure}
+
+link: https://github.com/tjswns494/assignment01.git
+
+
+
+\end{document}
